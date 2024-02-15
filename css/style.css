@@ -1,0 +1,55 @@
+*{
+    font-family: "Rubik", sans-serif;
+}
+.bg-isolvblue{
+    background-color: #003271;
+}
+.bg-lightblue{
+    background-color: #E6ECF2;
+}
+nav img, footer img{
+    max-width: 300px;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    font-weight: bolder;
+}
+.max-width{
+    max-width: 100%;
+}
+footer{
+    background-color: #003271;
+}
+.white-ft{
+    color: white;
+}
+.blue-ft{
+    color: #1E508F;
+}
+.btn-primary{
+    background-color: #1E508F !important;
+    border-color: #1E508F !important;
+}
+.btn-primary:hover {
+    background-color: #003271 !important;
+}
+h1{
+    font-weight:800 !important;
+    padding: 20px 0px 0px 0px;
+}
+ul{
+    list-style: none;
+}
+.resize{
+    max-width: 80%;
+}
+
+a{
+    color: #91C8FF !important;
+}
+.button-links{
+    text-decoration: none;
+    color: white !important;
+}
