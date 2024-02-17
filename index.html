@@ -7,39 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
-    <!--email jQuery-->
-    <script type="text/javascript">
-      $(document).ready(function(){
-      $('#btnSubmit').click(function(){
-      $('#btnSubmit').disabled = true;
-      var val = $('#emailAddress')[0].value;
-      $('#emailResponse').html('<img src="ajax-loader.gif" border="0" />').css('backgroundColor', 'ffffd0');
-      $.getJSON('notify.php',{email: val}, function(data){
-          if (!data.result) {
-              $('#emailResponse').html(data.message).css('backgroundColor','ff9999').effect('highlight', {color: '#ffff99'}, 1000);
-          } else {
-              $('#emailResponse').html(data.message).css('backgroundColor','99ff99').effect('highlight', {color: '#ffff99'}, 1000);
-          }
-          });
-              $('#btnSubmit').disabled = false;
-              return false;
-      });
-  $('#emailAddress').keyup(function(e) {
-      if(e.keyCode == 13) {
-          $('#btnSubmit').click();
-      }
-      return false;
-  });
-  });
-  
-  </script>
 
   </head>
   <body>
     <header>
-    <!--navbar-->
-    <nav class = "navbar bg-body-tertiary">
+    <!--navbar
+
+    <nav class = "navbar navbar-expand-lg bg-body-tertiary">
        <div class = "container-fluid bg-isolvblue">
           <a class="navbar-brand" href = "#">
             <img src = "images/isolvrisk-logo.png" alt = "a blue saturn with the title isolvrisk inc. next to it">
@@ -52,7 +26,7 @@
                     <a class="nav-link" href="about-us.html">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="case-study.html">Case Study</a>
+                    <a class="nav-link" href="case-study.html">ERM Analysis</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="community-impact.html">Community Impact</a>
@@ -62,28 +36,68 @@
                   </li>
                 </ul>
         </div>
+    </nav>-->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid bg-isolvblue">
+        <a class="navbar-brand" href = "#">
+          <img src = "images/isolvrisk-logo.png" alt = "a blue saturn with the title isolvrisk inc. next to it">
+        </a>
+        <!--toggle button-->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--sidebar-->
+        <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+         <!--sidebar header--> 
+          <div class="offcanvas-header text-white border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="case-study.html">ERM Analysis</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="community-impact.html">Community Impact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact-us.html">Contact Us</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
   <!--start of body-->
   <div class = "container">
     <section>
       <div class = "row align-items-center mb-3">
-        <div class = "col-6">
+        <div class = "col-sm-6">
           <h1 class = "fw-bold">RiskED</h1>
           <h5 class = "fw-bold mb-3"> The dream tool for universities and students</h5>
-          <p class = "lead"> Risk.Ed, the ultimate decision-making product for school faculty and students for high-schools and universities.</p>
+          <p class = "lead"> RiskEd, the ultimate decision-making product for school faculty and students for high-schools and universities.</p>
           <br>
           <h2 class = "fw-bold"> Our Mission</h2>
           <p class = "lh-lg">At iSolvRisk Inc., we're transforming the way we handle decision-making by making it as interactive as playing games for students.
             Our main aim is to shape a future in education where everyone, regardless of age, background, or financial circumstances, has an equal
               opportunity to thrive. We're dedicated to empowering students and providing universities with the information they need to understand students and help unlock amazing possibilities and endless opportunities.</p>
         </div>
-        <div class = "col-6">
+        <div class = "col-sm-6">
           <img class = "img-fluid ps-3" src = "images/homepage-risked.png" alt = "astronaut mascot working on computer with RiskED's application on it">
         </div>
       </div>
     </div>
     </section>
+    <!-- newsletter if needed later
     <div class="container-fluid">
     <section>
       <div class="row align-items-center justify-content-center bg-lightblue p-3 ">
@@ -97,10 +111,6 @@
               </div>
              </form>
           </div>
-        
-         <!-- <div class = "col-2">
-          <img class = "img-fluid" src = "images/daydreamer-perks.png" alt = "exclusive news, updates, events, and more!">
-        </div>-->
         <div class="col-4">
           <ul class = "lh-lg">
             <li> <span class = "ps-3 pe-3"> <img src = "images/blue-planet.png" alt = " a blue saturn"></span>Exclusive News</li>
@@ -108,6 +118,27 @@
             <li> <span class = "ps-3 pe-3"> <img src = "images/blue-planet.png" alt = " a blue saturn"></span> Events</li>
             <li> <span class = "ps-3 pe-3"> <img src = "images/blue-planet.png" alt = " a blue saturn"></span>and more!</li>
           </ul>
+        </div>
+      </div>
+    </section>
+  </div>-->
+
+  <!--request a demo-->
+  <div class="container-fluid">
+    <section>
+      <div class="row align-items-center justify-content-center bg-lightblue p-3 ">
+        <div class = "col-sm-7 ms-5">
+          <h2 class = "fw-bold">Be one of the first to see the demo!</h2>
+          <p class = "fw-bold"> Get an exclusive look at RiskEd and RiskIt functionality.</p>
+             <form action = "https://formsubmit.co/10d12e316c3fb9084c147ae4223779d7" method = "POST">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="example-email@mail.com" aria-label="email-address" aria-describedby="button-addon2" name = "email">
+                <button class="btn btn-primary" type="button" name = "submit" id="button-addon2" data-submit = "...Sending">Subscribe</button>
+              </div>
+             </form>
+          </div>
+        <div class="col-sm-4">
+          <img class = "img-fluid" src = "images/product-with-blue-background.png" alt = "a phone with blue graphics mimicking some of the interface that will be dispalyed in demo">
         </div>
       </div>
     </section>
@@ -119,13 +150,13 @@
   <footer>
     <div class = "container-fluid pb-3">
       <div class = "row align-items-center">
-        <div class = "col-4">
+        <div class = "col-sm-4">
           <a class="navbar-brand" href = "#">
             <img src = "images/isolvrisk-logo.png" alt = "a blue saturn with the title isolvrisk inc. next to it">
           </a>
         </div>
-        <div class = "col-8">
-          <ul class="nav justify-content-end">
+        <div class = "col-sm-8">
+          <ul class="nav justify-content-end ">
             <li class="nav-item">
               <a class="nav-link" href="terms-of-service.html">Terms of Service</a>
             </li>
@@ -137,7 +168,7 @@
             </li>
         </div>
         <div class = "row align-items-center">
-          <div class = "col-9 mx-4">
+          <div class = "col-sm-9 mx-4">
             <p class = "white-ft">Copyright @isolvIT 2008-2024. All rights reserved.</p>
           </div>
           <div class = "col">

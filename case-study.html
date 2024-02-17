@@ -10,53 +10,68 @@
   <body>
     <header>
     <!--navbar-->
-    <nav class = "navbar bg-body-tertiary">
-       <div class = "container-fluid bg-isolvblue">
-          <a class="navbar-brand" href = "index.html">
-            <img src = "images/isolvrisk-logo.png" alt = "a blue saturn with the title isolvrisk inc. next to it">
-          </a>
-                <ul class="nav justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link" href="product.html">Product</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about-us.html">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="case-study.html">Case Study</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="community-impact.html">Community Impact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact-us.html">Contact Us</a>
-                  </li>
-                </ul>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid bg-isolvblue">
+        <a class="navbar-brand" href = "index.html">
+          <img src = "images/isolvrisk-logo.png" alt = "a blue saturn with the title isolvrisk inc. next to it">
+        </a>
+        <!--toggle button-->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--sidebar-->
+        <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+         <!--sidebar header--> 
+          <div class="offcanvas-header text-white border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="case-study.html">ERM Analysis</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="community-impact.html">Community Impact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact-us.html">Contact Us</a>
+                </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </nav>
   </header>
   <!--start of body-->
 <div class = "container d-flex flex-column mb-3 align-items-center">
     <div class = "p-2">
-      <h1 class = "fw-bold">RiskEd Case Study</h1>
+      <h1 class = "fw-bold">RiskEd ERM Analysis</h1>
     </div>
     <div class = "p-2">
-      <p class = "lead"> Our team is working diligently to bring you this case study.</p>
+      <p class = "lead"> Our team is working diligently to bring you this analysis.</p>
     </div>
     <div class = "p-2">
-      <img src = "images/case -study-in-progress .png" alt = "A laptop with different hues of blue and different variations of shapes with a progress indicator above it and the words 'in progress'"> 
+      <img class = "img-fluid" src = "images/case -study-in-progress .png" alt = "A laptop with different hues of blue and different variations of shapes with a progress indicator above it and the words 'in progress'"> 
     </div>
 </div>
     <!--footer-->
     <footer>
       <div class = "container-fluid pb-3">
         <div class = "row align-items-center">
-          <div class = "col-4">
+          <div class = "col-sm-4">
             <a class="navbar-brand" href = "index.html">
               <img src = "images/isolvrisk-logo.png" alt = "a blue saturn with the title isolvrisk inc. next to it">
             </a>
           </div>
-          <div class = "col-8">
+          <div class = "col-sm-8">
             <ul class="nav justify-content-end">
               <li class="nav-item">
                 <a class="nav-link" href="terms-of-service.html">Terms of Service</a>
@@ -69,7 +84,7 @@
               </li>
           </div>
           <div class = "row align-items-center">
-            <div class = "col-9 mx-4">
+            <div class = "col-sm-9 mx-4">
               <p class = "white-ft">Copyright @isolvIT 2008-2024. All rights reserved.</p>
             </div>
             <div class = "col">
